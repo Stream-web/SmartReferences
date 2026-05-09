@@ -1,0 +1,49 @@
+{
+  "name": "vue-smart-references",
+  "displayName": "Vue Smart References",
+  "description": "Find Vue file references missed by builtin engine",
+  "version": "0.0.2",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vueSmartReferences.findCurrentFileReferences",
+        "title": "Smart 查找引用"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "vueSmartReferences.findCurrentFileReferences",
+          "group": "1_modification",
+          "when": "editorFocus"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "vueSmartReferences.findCurrentFileReferences",
+          "group": "2_workspace"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package:vsix": "vsce package"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "2.15.0",
+    "@types/node": "^20.11.5",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3"
+  }
+}
