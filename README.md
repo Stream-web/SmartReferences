@@ -1,6 +1,6 @@
 # Vue Smart References
 
-用于补充 VSCode/Cursor 在 Vue 项目中对“文件被引用位置”检索不完整的问题，尤其适配：
+vscode 插件，直接把.vsix直接拖到VSCode/cursor插件里面即可，用于补充 VSCode/Cursor 在 Vue 项目中对“文件被引用位置”检索不完整的问题，尤其适配：
 
 - `@/xxx` 别名路径引用
 - 省略 `.vue` 后缀的引用
